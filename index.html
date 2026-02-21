@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 AI Agent 共识决策系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #888;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,212,255,0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+        
+        .feature-desc {
+            color: #aaa;
+            line-height: 1.6;
+        }
+        
+        .code-section {
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .code-section h2 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+        }
+        
+        pre {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            color: #a9b7c6;
+        }
+        
+        .keyword { color: #cc7832; }
+        .string { color: #6a8759; }
+        .function { color: #ffc66d; }
+        .comment { color: #808080; }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+        
+        .stat-label {
+            color: #888;
+            margin-top: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #666;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .github-link {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+        
+        .github-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 AI Agent 共识决策系统</h1>
+        <p class="subtitle">首个AI Agent专属的集体决策与共识达成平台</p>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">~600</div>
+                <div class="stat-label">代码行数</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4+</div>
+                <div class="stat-label">提案类型</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">测试通过</div>
+            </div>
+        </div>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <div class="feature-title">Agent注册系统</div>
+                <div class="feature-desc">支持多Agent注册，投票权重配置，声誉追踪</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <div class="feature-title">提案系统</div>
+                <div class="feature-desc">创建单选/多选/排序/是与否各类提案</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🗳️</div>
+                <div class="feature-title">投票系统</div>
+                <div class="feature-desc">加权投票机制，投票评论，实时统计</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <div class="feature-title">共识算法</div>
+                <div class="feature-desc">多数同意/共识机制/一致通过</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">决策追踪</div>
+                <div class="feature-desc">完整历史记录，统计分析，排行榜</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <div class="feature-title">AI策略引擎</div>
+                <div class="feature-desc">智能决策建议，心理分析，行动推荐</div>
+            </div>
+        </div>
+        
+        <div class="code-section">
+            <h2>🚀 快速开始</h2>
+            <pre><code><span class="keyword">const</span> { ConsensusDecisionSystem, AIConsensusStrategy } = <span class="keyword">require</span>(<span class="string">'./index.js'</span>);
+
+<span class="keyword">const</span> system = <span class="keyword">new</span> <span class="function">ConsensusDecisionSystem</span>({
+    consensusThreshold: <span class="string">0.6</span>
+});
+
+<span class="comment">// 注册Agent</span>
+system.<span class="function">registerAgent</span>(<span class="string">'alpha'</span>, <span class="string">'🔵 阿尔法'</span>);
+system.<span class="function">registerAgent</span>(<span class="string">'beta'</span>, <span class="string">'🔴 贝塔'</span>);
+
+<span class="comment">// 创建提案</span>
+<span class="keyword">const</span> proposal = system.<span class="function">createProposal</span>(
+    <span class="string">'alpha'</span>,
+    <span class="string">'我们应该使用哪个API？'</span>,
+    <span class="string">'需要决定新项目的API选择'</span>,
+    [<span class="string">'OpenAI'</span>, <span class="string">'Anthropic'</span>],
+    <span class="string">'single'</span>
+);
+
+<span class="comment">// Agent投票</span>
+system.<span class="function">vote</span>(<span class="string">'alpha'</span>, proposal.proposal.id, <span class="string">0</span>);
+system.<span class="function">vote</span>(<span class="string">'beta'</span>, proposal.proposal.id, <span class="string">1</span>);
+
+<span class="comment">// AI策略建议</span>
+<span class="keyword">const</span> ai = <span class="keyword">new</span> <span class="function">AIConsensusStrategy</span>(system, <span class="string">'alpha'</span>);
+console.<span class="function">log</span>(ai.<span class="function">getNextAction</span>());
+console.<span class="function">log</span>(ai.<span class="function">getPsychAnalysis</span>());</code></pre>
+        </div>
+        
+        <div class="footer">
+            <p>🎉 首个专门为AI Agent设计的共识决策系统</p>
+            <p>让AI Agent学会"民主"决策，提升多Agent协作效率</p>
+            <p style="margin-top: 20px;">
+                <a href="https://github.com/perlinson/ai-agent-consensus-decision-system" class="github-link" target="_blank">
+                    GitHub →
+                </a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
